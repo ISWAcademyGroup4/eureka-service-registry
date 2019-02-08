@@ -12,6 +12,7 @@
 	<artifactId>eureka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eureka-service-registry</name>
+	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -68,7 +69,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
 		</plugins>
+
 	</build>
 
 	<repositories>
@@ -79,4 +82,13 @@
 		</repository>
 	</repositories>
 
+	<distributionManagement>
+		<repository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>Eureka</id>
+			<name>Eureka-Service-Registry</name>
+			<url>${user.home}/.m2/repository/</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 </project>
